@@ -1,0 +1,26 @@
+@model List<BikeStation>
+
+<h1>Liste des stations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Nb vélos</th>
+            <th>Nb vélos élec</th>
+
+            <th>Nb emplacements</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var station in Model)
+        {
+            <tr>
+                <td>@station.Name</td>
+                <td>@station.BikeCountTotal</td>
+                <td>@station.ElectricBikeCount</td>
+                <td>@station.SlotCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
